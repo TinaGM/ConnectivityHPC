@@ -1,0 +1,72 @@
+!Tina's Linux Notes
+
+!To Log in 
+ssh - TinaGinaMoMeena@login.hpc.ncsu.edu
+! You will be prompted for a password
+
+!Navigating to the project
+!Veiw your scrach drive
+ls 
+!Open Project
+cd ConnectivityHPC
+ls 
+! veiw files
+
+! Once we are in the project
+! Pull down the newest update
+git pull 
+
+! Once we are done for the day 
+
+git add -A 
+!or 
+git add filename.file
+git commmit -m "Today Tina solved the problem"
+git push -u orgin master
+
+!Generall movement
+!move files  
+mv filename.file drive/location
+!up one level 
+mv filename .. 
+! move where you are up one level
+cd ..
+! move back to the highest level (Warning this may be higher than you think and you may not be able to get back easily)
+cd 
+!interrupt fucntion 
+ctrl+c 
+! read a text based file (text file, r code, code)
+vi textfile.R
+
+
+! I dont know if you will need this. But if you need to get a internet connection in order to download packages try 
+module load proxy_vars
+
+!!! Running R
+! to run a script
+R myscript.R
+!! To run a line 
+R -c "library(raster);print("hi");a=1+5;print(a)"
+!!!not the seperation by semi colon. 
+
+!!! From the HPC website 
+!!! On batching runs
+#!/bin/tcsh
+#BSUB -n 1 ! nodes
+#BSUB -W 120 ! time in minutes
+#BSUB -J mycode ! c1 function all code
+#BSUB -o stdout.%J ! where to write outputs
+#BSUB -e stderr.%J ! wher eto write outputs 
+-R "rusage[usage_type=#number]".
+#BSUB -R "rusage[mem=16000]"
+
+!!! When we allocate resources we alllllllways write down our job id so we don't los eit and then can't kill it and then we charge 1000000$ to robs account. 
+bjobs -l JOBID
+bkill JOBID
+!!! if we forget we can kill all jobs  by using 
+bkill 0  (zero)
+!mycode.exe
+
+
+
+
