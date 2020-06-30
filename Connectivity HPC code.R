@@ -1,6 +1,6 @@
 #Connectivity analysis script
 
-library(spatialEco)
+require(spatialEco)
 require(sp)
 library(usedist)
 library(rgeos)
@@ -19,8 +19,8 @@ library(reshape2)
 library(data.table)
 
 #Create master map of all habitat created by a conservation strategy
-Drive<-"E:/LCP sensitivity test/geo1s5000/"
-XO<- list.files(Drive, pattern = "^geo(.*)tif$")
+#Drive<-
+XO<- list.files("/folder/",pattern = "^geo(.*)tif$")
 ManyRunsStack<-raster::stack(paste0(Drive,XO))
 SumStack<-sum(ManyRunsStack)
 
