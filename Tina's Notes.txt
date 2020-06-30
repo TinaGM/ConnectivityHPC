@@ -37,6 +37,8 @@ cd
 ctrl+c 
 ! read a text based file (text file, r code, code)
 vi textfile.R
+! exit out if the HPC opened up R and I'm now actually in R
+q()
 
 
 ! I dont know if you will need this. But if you need to get a internet connection in order to download packages try 
@@ -45,6 +47,9 @@ module load proxy_vars
 !!! Running R
 ! to run a script
 R myscript.R
+!!!! this one worked
+module load R
+R CMD BATCH filename.R
 !! To run a line 
 R -c "library(raster);print("hi");a=1+5;print(a)"
 !!!not the seperation by semi colon. 
