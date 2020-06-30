@@ -10,13 +10,19 @@ library(igraph)
 library(sf)
 library(rgdal)
 library(gdistance)
-library(rgeos)
 library(otuSummary)
 library(gdata)
 library(maptools)
 library(tidyverse)
 library(reshape2)
 library(data.table)
+
+#Bring in ecoregion map to use for crs and extent template
+Ecoregion <- raster(paste0(Drive, "Ecoregion100f.tif",sep=""))
+
+#Bring in landis standmap
+Landis_standmap <- raster(paste0(Drive, "Standmap100.tif",sep=""))
+
 
 #Create master map of all habitat created by a conservation strategy
 #Drive<-
@@ -162,9 +168,9 @@ for (i in TimestepList) {
   test_raster2[test_raster2 ==0] <- (1/90)
   
   #roads
-  test_raster2[roads$RouteClass %in% c(1:2)] <- (1/100)
-  test_raster2[roads$RouteClass %in% c(3:4)] <- (1/95)
-  test_raster2[roads$RouteClass %in% c(5:89)] <- (1/90)
+  #test_raster2[roads$RouteClass %in% c(1:2)] <- (1/100)
+  #test_raster2[roads$RouteClass %in% c(3:4)] <- (1/95)
+  #test_raster2[roads$RouteClass %in% c(5:89)] <- (1/90)
   
   test_raster3 <- test_raster2
   test_raster3[test_raster3 >0.1] <- 1
