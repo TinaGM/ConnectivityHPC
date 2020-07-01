@@ -7,8 +7,7 @@ Ecoregion <- raster(paste("Ecoregion100f.tif",sep=""))
 Landis_standmap <- raster(paste("Standmap100.tif",sep=""))
 
 #Read in roads file
-#roads <- readOGR("R:/fer/rschell/Mozelewski/NCRouteCharacteristics_SHP/NCRouteClip.shp")
-#roads <- spTransform(roads, crs (Ecoregion))
+roads <- raster(paste("roads.tif",sep=""))
 
 XO<- list.files(pattern = "^geo(.*)tif$")
 ManyRunsStack<-raster::stack(XO)
@@ -153,9 +152,9 @@ for (i in TimestepList)
   test_raster2[test_raster2 ==0] <- (1/90)
   
   #roads
-  #test_raster2[roads$RouteClass %in% c(1:2)] <- (1/100)
-  #test_raster2[roads$RouteClass %in% c(3:4)] <- (1/95)
-  #test_raster2[roads$RouteClass %in% c(5:89)] <- (1/90)
+  #test_raster2[roads %in% c(1:2)] <- (1/100)
+  #test_raster2[roads %in% c(3:4)] <- (1/95)
+  #test_raster2[roads %in% c(5:89)] <- (1/90)
   
   test_raster3 <- test_raster2
   test_raster3[test_raster3 >0.1] <- 1
