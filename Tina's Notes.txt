@@ -72,6 +72,7 @@ bkill JOBID
 bkill 0  (zero)
 !mycode.exe
 
-
+!!! File path to conda env
+/usr/local/usrapps/tcsi/env_tcsi
 
 
