@@ -1,0 +1,24 @@
+!!! How long will x take?
+For all time steps for specialist species, the script that writes both the nodes and distances file (and inclundes that dastardly costDistance calc)
+took approximately ~32-36 hours. For a single time step, the time requirement varies by the number of nodes (i.e. the final time steps have the most
+nodes and will take the longest to calculate). Maximum time for a single node in my estimation would be 6-8 hours.
+
+I wasn't able to run this for generalist species, which have more nodes, because I ran out of memory. But the maximum time for a single time step
+will almost certainly be longer than the 6-8 hours mentioned above.
+
+For the connectivity analyses, knowing how much time this will require on the finer resolution landscape, we'll need to do a test run. It was taking 
+4 hours to run all time steps with far fewer nodes when I was using the coarser resolution. I'd guess ~6-12 hours per time step but again this is an 
+only a moderately informed guess.
+
+!!! How many times will we need to do y?
+In total there are 720 individual time steps to run (4 species types x 4 conservation strategies x 5 replicates per strategy x 9 time steps). Each individual
+time step will require running both the connectivity script to get the nodes and distances text files and calculate some connectivity metrics, as well as
+the Conefor script to calculate the graph theory connectivity metrics.
+
+!!! Memory requirements?
+Stay tuned on this one. For specialist species and using 3 of the 4 conservation strategies, we should be able to use 64gb nodes (270 individual time steps). 
+For specialist species using the economic strategy and all generalist species we will need the largest nodes (128gb I think?) (450 individual time steps). 
+The reason I say to stay tuned is that right now, I've implemented a rule that habitat patches must be at least 2 hecatres to be considered a node, which 
+definitely reduces computational intensitiy and memory requirements. I'm doing sensitivity testing right now to make sure that using this rule, I can still 
+pick up differences between strategies. IF that's not the case, we'll need to revisit memory requirements because they'd all need to be run on the largest 
+nodes and I'm not even sure if that would be enough for the generalist species. 
