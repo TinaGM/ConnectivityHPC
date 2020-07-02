@@ -250,4 +250,4 @@ pol1_dis$ID<-seq(from = 1, to= length(pol1_dis), by=1)
 
 #Make habitat nodes file to be used for Conefor
 maketext <- cbind(pol1_dis$ID, pol1_dis$weight)
-write.table(maketext, file=paste("Outputs/nodes_TMgeos1_",i,".txt"), sep = "\t", row.names = FALSE, col.names = FALSE)
+write.table(maketext, file=paste0("Outputs/nodes_TMgeos1_Thisoneisdiffernt",i,".txt"), sep = "\t", row.names = FALSE, col.names = FALSE)

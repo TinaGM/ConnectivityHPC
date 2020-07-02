@@ -1,7 +1,7 @@
 
-R version 3.5.1 (2018-07-02) -- "Feather Spray"
-Copyright (C) 2018 The R Foundation for Statistical Computing
-Platform: x86_64-pc-linux-gnu (64-bit)
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -21,23 +21,36 @@ Type 'q()' to quit R.
 
 > require(spatialEco)
 Loading required package: spatialEco
-Warning message:
-In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
-  there is no package called ‘spatialEco’
 > require(sp)
 Loading required package: sp
 > require(usedist)
 Loading required package: usedist
 > require(rgeos)
 Loading required package: rgeos
-Error: package or namespace load failed for ‘rgeos’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/home/zjrobbin/R/x86_64-pc-linux-gnu-library/3.5/rgeos/libs/rgeos.so':
-  libgeos_c.so.1: cannot open shared object file: No such file or directory
+rgeos version: 0.5-3, (SVN revision 634)
+ GEOS runtime version: 3.8.1-CAPI-1.13.3 
+ Linking to sp version: 1.4-1 
+ Polygon checking: TRUE 
+
 > require(raster)
 Loading required package: raster
+
+Attaching package: ‘raster’
+
+The following object is masked from ‘package:spatialEco’:
+
+    shift
+
 > require(spatstat)
 Loading required package: spatstat
 Loading required package: spatstat.data
+
+Attaching package: ‘spatstat.data’
+
+The following object is masked from ‘package:spatialEco’:
+
+    ants
+
 Loading required package: nlme
 
 Attaching package: ‘nlme’
@@ -52,13 +65,15 @@ spatstat 1.64-1       (nickname: ‘Help you I can, yes!’)
 For an introduction to spatstat, type ‘beginner’ 
 
 
-Note: R version 3.5.1 (2018-07-02) is more than a year old; we strongly recommend upgrading to the latest version
-
 Attaching package: ‘spatstat’
 
 The following objects are masked from ‘package:raster’:
 
     area, rotate, shift
+
+The following object is masked from ‘package:spatialEco’:
+
+    shift
 
 > require(igraph)
 Loading required package: igraph
@@ -73,6 +88,14 @@ The following object is masked from ‘package:raster’:
 
     union
 
+The following object is masked from ‘package:rgeos’:
+
+    union
+
+The following objects are masked from ‘package:spatialEco’:
+
+    knn, similarity
+
 The following objects are masked from ‘package:stats’:
 
     decompose, spectrum
@@ -83,14 +106,17 @@ The following object is masked from ‘package:base’:
 
 > require(sf)
 Loading required package: sf
-Warning message:
-In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
-  there is no package called ‘sf’
+Linking to GEOS 3.8.1, GDAL 3.0.4, PROJ 6.3.1
 > require(rgdal)
 Loading required package: rgdal
-Error: package or namespace load failed for ‘rgdal’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/home/zjrobbin/R/x86_64-pc-linux-gnu-library/3.5/rgdal/libs/rgdal.so':
-  libgdal.so.20: cannot open shared object file: No such file or directory
+rgdal: version: 1.4-8, (SVN revision 845)
+ Geospatial Data Abstraction Library extensions to R successfully loaded
+ Loaded GDAL runtime: GDAL 3.0.4, released 2020/01/28
+ Path to GDAL shared files: 
+ GDAL binary built with GEOS: TRUE 
+ Loaded PROJ.4 runtime: Rel. 6.3.1, February 10th, 2020, [PJ_VERSION: 631]
+ Path to PROJ.4 shared files: /usr/local/usrapps/tcsi/env_tcsi/share/proj
+ Linking to sp version: 1.4-1 
 > require(gdistance)
 Loading required package: gdistance
 Loading required package: Matrix
@@ -100,6 +126,10 @@ Attaching package: ‘gdistance’
 The following object is masked from ‘package:igraph’:
 
     normalize
+
+The following object is masked from ‘package:spatialEco’:
+
+    overlap
 
 > require(otuSummary)
 Loading required package: otuSummary
@@ -157,6 +187,9 @@ Loading required package: maptools
 Checking rgeos availability: TRUE
 > require(tidyverse)
 Loading required package: tidyverse
+Registered S3 method overwritten by 'cli':
+  method     from    
+  print.boxx spatstat
 ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
 ✔ ggplot2 3.3.2     ✔ purrr   0.3.4
 ✔ tibble  3.0.1     ✔ dplyr   1.0.0
@@ -218,7 +251,11 @@ The following object is masked from ‘package:raster’:
 
     shift
 
-> 
+The following object is masked from ‘package:spatialEco’:
+
+    shift
+
+> q()
 > proc.time()
    user  system elapsed 
-  6.421   0.960   8.145 
+  7.292   0.979  11.881 
