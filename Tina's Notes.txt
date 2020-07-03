@@ -5,6 +5,11 @@ ssh - TinaGinaMoMeena@login.hpc.ncsu.edu
 ! You will be prompted for a password
 
 !Navigating to the project
+! go to the shared drive 
+cd /share/tcsi/Tmoz/ConnectivityHPC
+
+
+
 !Veiw your scrach drive
 ls 
 !Open Project
@@ -75,4 +80,15 @@ bkill 0  (zero)
 !!! File path to conda env
 /usr/local/usrapps/tcsi/env_tcsi
 
+!Loading in HPC jobs 
+conda activate /usr/local/usrapps/tcsi/env_tcsi
+!then submit script 
+bsub < PracticeRun.csh
+!check on run 
+bjobs
+! when STAT is done or there are no jobs listed job is done. You can check on it 
+bjobs -l JOB ID
+!This will give you a big list of things, but should say if it is done, or that the cpue time used is ___ that means its still running
 
+
+Running job 931100
