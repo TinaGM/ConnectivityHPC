@@ -1,0 +1,54 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-14>
+Subject: Job 950167: <TestCostDistance> in cluster <henry2> Exited
+
+Job <TestCostDistance> was submitted from host <login04> by user <tgmozele> in cluster <henry2> at Fri Jul  3 11:09:52 2020
+Job was executed on host(s) <2*n2c1-14>, in queue <debug>, as user <tgmozele> in cluster <henry2> at Fri Jul  3 11:09:57 2020
+                            <2*n2c1-13>
+</home/tgmozele> was used as the home directory.
+</share/tcsi/tgmozele/ConnectivityHPC> was used as the working directory.
+Started at Fri Jul  3 11:09:57 2020
+Terminated at Fri Jul  3 11:10:10 2020
+Results reported at Fri Jul  3 11:10:10 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 10
+#BSUB -J TestCostDistance
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+#BSUB -R "rusage[mem=8000]"
+R CMD BATCH PracticeRun2.csh '--args i=20'
+
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   10.79 sec.
+    Max Memory :                                 205.59 MB
+    Average Memory :                             205.59 MB
+    Total Requested Memory :                     16000.00 MB
+    Delta Memory :                               15794.41 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   13 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <stderr.950167> for stderr output of this job.
+

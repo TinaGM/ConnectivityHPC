@@ -17,7 +17,8 @@ require(data.table)
 #setwd("C:/Users/zjrobbin/Documents/GitHub/ConnectivityHPC/")
 #getwd()
 #Create master map of all habitat created by a conservation strategy
-i = 20
+args<-commandArgs(trailingOnly=TRUE)
+i=args[1]
 #Bring in ecoregion map to use for crs and extent template
 Ecoregion <- raster("Inputs/Ecoregion100f.tif")
 

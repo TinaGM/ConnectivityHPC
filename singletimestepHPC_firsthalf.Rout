@@ -495,4 +495,4 @@ The following object is masked from ‘package:spatialEco’:
 > 
 > proc.time()
    user  system elapsed 
-374.304  17.081 400.231 
+366.455  13.588 395.246 
