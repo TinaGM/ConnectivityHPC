@@ -15,6 +15,15 @@ In total there are 720 individual time steps to run (4 species types x 4 conserv
 time step will require running both the connectivity script to get the nodes and distances text files and calculate some connectivity metrics, as well as
 the Conefor script to calculate the graph theory connectivity metrics.
 
+For instance, for the geodiversity strategy (geo): Geo1 is the first model replicate of that strategy. Connectivity metrics for Geo1 will need to be 
+calculated for each of the 4 species types (Geo1s1000 [geo diversity strategy, first replicate, for a specialist species with 1000m max dispersal distance],
+Geo1s5000, Geo1g1000, and Geo1g5000). Each of those 4 conservation strategy/species type combinations has 9 time steps (i.e. Geo1s1000_0, Geo1s1000_10, etc.)  
+for which we will need to run both the script with costdistance and the conefor script. So for we will run the first connectivity script (the one with cost
+distance) for Geo1s1000_0, then run the conefor script for Geo1s1000_0 using the outputs from the first connectivity script. Then we run the first connectivity
+script for Geo1s1000_10, followed by the Conefor script for Geo1s1000_10. Continue this for each time step (0 to 80 by 10). Then repeat for all time steps in 
+Geo2s1000, Geo3s1000, Geo4s1000, and Geo5s1000. Then do for 5 replicates of Geo(1-5)s5000, Geo(1-5)g1000, and Geo(1-5)g5000. Then repeat all of this for the
+other 3 conservation strategies.
+
 !!! Memory requirements?
 Stay tuned on this one. For specialist species and using 3 of the 4 conservation strategies, we should be able to use 64gb nodes (270 individual time steps). 
 For specialist species using the economic strategy and all generalist species we will need the largest nodes (128gb I think?) (450 individual time steps). 
