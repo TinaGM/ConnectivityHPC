@@ -90,5 +90,7 @@ bjobs
 bjobs -l JOB ID
 !This will give you a big list of things, but should say if it is done, or that the cpue time used is ___ that means its still running
 
-
-Running job 931100
+!Once you are done, 
+!check the file
+vi std.outJobID#
+!This will give you the low down on how the run went  
