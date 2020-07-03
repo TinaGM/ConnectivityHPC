@@ -6,5 +6,5 @@
 #BSUB -o stdout.%J
 #BSUB -e stderr.%J
 #BSUB -R "rusage[mem=8000]"
-R CMD BATCH PracticeRun2.csh '--args i=20'
+R CMD BATCH singletimestepHPC.R '--args i=20'
 
