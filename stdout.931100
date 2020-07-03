@@ -1,0 +1,56 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2a4-14>
+Subject: Job 931100: <TestCostDistance> in cluster <henry2> Exited
+
+Job <TestCostDistance> was submitted from host <login04> by user <zjrobbin> in cluster <henry2> at Thu Jul  2 14:33:57 2020
+Job was executed on host(s) <2*n2a4-14>, in queue <single_chassis>, as user <zjrobbin> in cluster <henry2> at Thu Jul  2 14:33:59 2020
+                            <2*n2a4-11>
+</home/zjrobbin> was used as the home directory.
+</home/zjrobbin/ConnectivityHPC> was used as the working directory.
+Started at Thu Jul  2 14:33:59 2020
+Terminated at Thu Jul  2 19:05:11 2020
+Results reported at Thu Jul  2 19:05:11 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 600
+#BSUB -J TestCostDistance
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+#BSUB -R "rusage[mem=32000]"
+R CMD BATCH singletimestepHPC.R
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+des" "links" "avgnode" "totnode" "avgLCP" "avgENN" "density" "transitivity"
+"1" 12723 431360 7.8461869945581 99827.0371317627 176521.282406613 133.974982648159 0.018383378418836 0.615332026891764
+
+    CPU time :                                   16264.53 sec.
+    Max Memory :                                 18324.47 MB
+    Average Memory :                             14059.91 MB
+    Total Requested Memory :                     64000.00 MB
+    Delta Memory :                               45675.53 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   16274 sec.
+    Turnaround time :                            16274 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <stderr.931100> for stderr output of this job.
+

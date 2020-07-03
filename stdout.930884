@@ -1,0 +1,53 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c2-10>
+Subject: Job 930884: <TestRLandscape> in cluster <henry2> Done
+
+Job <TestRLandscape> was submitted from host <login04> by user <zjrobbin> in cluster <henry2> at Thu Jul  2 14:15:01 2020
+Job was executed on host(s) <2*n2c2-10>, in queue <debug>, as user <zjrobbin> in cluster <henry2> at Thu Jul  2 14:15:09 2020
+                            <2*n2c2-13>
+</home/zjrobbin> was used as the home directory.
+</home/zjrobbin/ConnectivityHPC> was used as the working directory.
+Started at Thu Jul  2 14:15:09 2020
+Terminated at Thu Jul  2 14:22:20 2020
+Results reported at Thu Jul  2 14:22:20 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 10
+#BSUB -J TestRLandscape
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+#BSUB -R "rusage[mem=16000]"
+R CMD BATCH singletimestepHPC_firsthalf.R
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   420.83 sec.
+    Max Memory :                                 3473.88 MB
+    Average Memory :                             2872.59 MB
+    Total Requested Memory :                     32000.00 MB
+    Delta Memory :                               28526.12 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   441 sec.
+    Turnaround time :                            439 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <stderr.930884> for stderr output of this job.
+
