@@ -1,0 +1,5 @@
+PCnum	9.14273e+08
+EC(PC)	30236.9
+PCintra(%)	3.07156
+PCdirect(%)	15.1148
+PCstep(%)	81.8137

@@ -1,0 +1,2 @@
+Prefix	Distance	Probability	EC(PC)	
+20.txt	15000	0.5	30236.9	

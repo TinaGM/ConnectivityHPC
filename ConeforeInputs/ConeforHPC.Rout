@@ -1,0 +1,43 @@
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #Conefore command line
+> 
+> system("./conefor2.7.3Linux -nodeFile nodes_TMrand1_ -conFile distance_TMrand1_ -t dist notall -* -confProb 15000 0.5 -PC onlyoverall")
+
+Number of file pairs: 1
+Executing the following command: ./conefor2.7.3Linux -nodeFile nodes_TMrand1_ -conFile distance_TMrand1_ -t dist notall -* -confProb 15000 0.5 -PC onlyoverall 
+Execution started at: Fri Jul  3 10:31:39 2020
+
+Number of nodes to process: 5720
+Sum of the attributes of existing nodes: 84582.2
+Distance and probability (probabilistic indices): 15000 0.5
+PC computed in the default mode: checking all paths (no connections discarded)
+Node file: nodes_TMrand1_20.txt
+Connection file: distance_TMrand1_20.txt
+
+Progress of the calculations is being written to file 20.txt_execution_events.txt
+Execution ended at: Fri Jul  3 11:08:05 2020
+
+Total processing time:  36 minutes 26 seconds
+> 
+> 
+> proc.time()
+    user   system  elapsed 
+2172.524   10.619 2186.604 
