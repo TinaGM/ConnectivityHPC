@@ -1,0 +1,53 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n3i4-5>
+Subject: Job 941536: <TestCostDistance> in cluster <henry2> Exited
+
+Job <TestCostDistance> was submitted from host <login04> by user <zjrobbin> in cluster <henry2> at Fri Jul  3 10:05:20 2020
+Job was executed on host(s) <4*n3i4-5>, in queue <short>, as user <zjrobbin> in cluster <henry2> at Fri Jul  3 10:05:22 2020
+</home/zjrobbin> was used as the home directory.
+</share/tcsi/zjrobbin/ConnectivityHPC/ConeforeInputs> was used as the working directory.
+Started at Fri Jul  3 10:05:22 2020
+Terminated at Fri Jul  3 10:05:23 2020
+Results reported at Fri Jul  3 10:05:23 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 60
+#BSUB -J TestCostDistance
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+#BSUB -R span[hosts=1] 
+#BSUB -R "rusage[mem=64000]"
+R CMD BATCH ConeforHPC.R
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.44 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     64000.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   4 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <stderr.941536> for stderr output of this job.
+
