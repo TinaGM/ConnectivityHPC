@@ -1,0 +1,53 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2e4-5>
+Subject: Job 51104: <TestCostDistance> in cluster <henry2> Exited
+
+Job <TestCostDistance> was submitted from host <login03> by user <tgmozele> in cluster <henry2> at Mon Jul  6 11:20:17 2020
+Job was executed on host(s) <3*n2e4-5>, in queue <debug>, as user <tgmozele> in cluster <henry2> at Mon Jul  6 11:20:23 2020
+                            <1*n2e4-8>
+</home/tgmozele> was used as the home directory.
+</share/tcsi/tgmozele/ConnectivityHPC> was used as the working directory.
+Started at Mon Jul  6 11:20:23 2020
+Terminated at Mon Jul  6 11:20:24 2020
+Results reported at Mon Jul  6 11:20:24 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 10
+#BSUB -J TestCostDistance
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+#BSUB -R "rusage[mem=8000]"
+Rscript singletimestepHPC_firsthalf.R '--args i=20'
+
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.05 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     16000.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   21 sec.
+    Turnaround time :                            7 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <stderr.51104> for stderr output of this job.
+
