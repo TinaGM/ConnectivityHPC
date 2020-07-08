@@ -1,7 +1,7 @@
 !Tina's Linux Notes
 
 !To Log in 
-ssh - TinaGinaMoMeena@login.hpc.ncsu.edu
+ssh TinaGinaMoMeena@login.hpc.ncsu.edu
 ! You will be prompted for a password
 
 !Navigating to the project
