@@ -105,3 +105,30 @@ vi std.outJobID#
 ! run as 
 R CMD BATCH  singletimestepHPC_firsthalf.R '--args i=20' 
 
+! Setting up conda
+! Any of the steps listed below that contain brackets [] are just for denote that this si where your project specific information goes. Don't actually include brackets.
+! First, follow step 1 to initialize conday and set 2 to make a condarc file from this website: https://projects.ncsu.edu/hpc/Software/Apps.php?app=Conda
+! DO NOT DO conda create --prefix /usr/local/usrapps/[your_path]/env_ABC AAA BBB CCC 
+
+! Instead, make the YAML file:
+nano [projectname- don't include brackets].yml
+
+! And put this text in the YAML file:
+name: tcsi
+channels:
+  - conda-forge
+  - r
+dependencies:
+ - r-[package you want to use]
+ - r-[another package you'll use]
+ - r-[and another, etc.]
+
+! Then  do
+conda env create --prefix=/usr/local/usrapps/[your_path]/env_[projectname] -f [projectname].yml
+
+! That will install all the packages.  It might take some time.  After it installs, do:
+conda activate /usr/local/usrapps/[your_path]/env_[projectname]
+! ('conda activate' is like 'module load' in that it sets the environment)
+
+! To exit the environment, do:
+conda deactivate
