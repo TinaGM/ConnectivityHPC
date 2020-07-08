@@ -5,4 +5,4 @@
 #BSUB -J TestCostDistance
 #BSUB -o stdout.%J
 #BSUB -e stderr.%J
-R CMD BATCH  singletimestepHPC_firsthalf.R '--args i=20' 
+R CMD BATCH --no-save --no-restore  singletimestepHPC_firsthalf.R '--args i=20' 
