@@ -94,3 +94,14 @@ bjobs -l JOB ID
 !check the file
 vi std.outJobID#
 !This will give you the low down on how the run went  
+
+
+! Setting up argument passing in an r file 
+! See https://stackoverflow.com/questions/14167178/passing-command-line-arguments-to-r-cmd-batch
+! At the begining of the R code include 
+
+
+
+! run as 
+R CMD BATCH  singletimestepHPC_firsthalf.R '--args i=20' 
+
