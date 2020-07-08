@@ -6,9 +6,9 @@ ssh TinaGinaMoMeena@login.hpc.ncsu.edu
 
 !Navigating to the project
 ! go to the shared drive 
-cd /share/tcsi/Tmoz/ConnectivityHPC
+cd /share/tcsi/tgmozele/ConnectivityHPC
 
-
+! Order of operations: log in, navigate to drive, git pull, activate conda, run jobs, deactivate conda, git add, git commit, git push
 
 !Veiw your scrach drive
 ls 
@@ -26,8 +26,8 @@ git pull
 git add -A 
 !or 
 git add filename.file
-git commmit -m "Today Tina solved the problem"
-git push -u orgin master
+git commit -m "Today Tina solved the problem"
+git push -u origin master
 
 !Generall movement
 !move files  
