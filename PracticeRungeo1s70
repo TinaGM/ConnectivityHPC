@@ -1,0 +1,8 @@
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 18:00
+#BSUB -J TestCostDistance
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+#BSUB -R "rusage[mem=64000]"
+R CMD BATCH HPCgeo1s70.R
