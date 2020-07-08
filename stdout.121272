@@ -1,0 +1,54 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-12>
+Subject: Job 121272: <TestCostDistance> in cluster <henry2> Exited
+
+Job <TestCostDistance> was submitted from host <login03> by user <zjrobbin> in cluster <henry2> at Wed Jul  8 07:58:06 2020
+Job was executed on host(s) <1*n2c1-12>, in queue <debug>, as user <zjrobbin> in cluster <henry2> at Wed Jul  8 07:58:12 2020
+                            <1*n2c1-13>
+                            <1*n2c1-11>
+                            <1*n2c1-9>
+</home/zjrobbin> was used as the home directory.
+</share/tcsi/zjrobbin/ConnectivityHPC> was used as the working directory.
+Started at Wed Jul  8 07:58:12 2020
+Terminated at Wed Jul  8 07:58:12 2020
+Results reported at Wed Jul  8 07:58:12 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/tcsh
+#BSUB -n 4
+#BSUB -W 10
+#BSUB -J TestCostDistance
+#BSUB -o stdout.%J
+#BSUB -e stderr.%J
+Rscript --verbose singletimestepHPC_firsthalf.R 20 >singletimestepHPC_firsthalf2.Rout
+
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.04 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   22 sec.
+    Turnaround time :                            6 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <stderr.121272> for stderr output of this job.
+

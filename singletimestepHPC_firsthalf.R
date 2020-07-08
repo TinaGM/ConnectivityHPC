@@ -17,8 +17,10 @@ require(data.table)
 #setwd("C:/Users/zjrobbin/Documents/GitHub/ConnectivityHPC/")
 #getwd()
 #Create master map of all habitat created by a conservation strategy
-args<-commandArgs(trailingOnly=TRUE)
-i=args[1]
+#args<-commandArgs(trailingOnly=TRUE)
+#i=as.numeric(args[1])
+eval(parse(text=paste(commandArgs(trailingOnly = TRUE), collapse=";")))
+
 #Bring in ecoregion map to use for crs and extent template
 Ecoregion <- raster("Inputs/Ecoregion100f.tif")
 
@@ -251,4 +253,4 @@ pol1_dis$ID<-seq(from = 1, to= length(pol1_dis), by=1)
 
 #Make habitat nodes file to be used for Conefor
 maketext <- cbind(pol1_dis$ID, pol1_dis$weight)
-write.table(maketext, file=paste0("Outputs/nodes_TMgeos1_Thisoneisdiffernt",i,".txt"), sep = "\t", row.names = FALSE, col.names = FALSE)
+write.table(maketext, file=paste0("Outputs/nodes_TMgeos1_Thisoneisdiffernt78",i,".txt"), sep = "\t", row.names = FALSE, col.names = FALSE)
