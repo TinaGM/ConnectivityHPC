@@ -132,3 +132,10 @@ conda activate /usr/local/usrapps/[your_path]/env_[projectname]
 
 ! To exit the environment, do:
 conda deactivate
+ 
+!
+To run the script with multiple jobs 
+!first give it permission by 
+chmod u+x New_Job_Submit.csh
+! Then run
+./New_Job_Submit.csh
