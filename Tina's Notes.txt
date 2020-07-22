@@ -47,6 +47,19 @@ q()
 
 !!!! To give permissions/access to a folder or file (i.e. if Zachary or Tina uploads something, giving permission to the other person to edit/write):
 chmod -R a+rwX *
+! for your linux knowledge
+! chmod is change permissions
+! -R means recursive (all files below)
+! a is all people
+! other options would be user or group
+! u
+! g
+! + adds writes
+! rights*
+! r is read
+! w is write
+! X is execute
+! * is wildcard so it finds both folders and files
 
 ! I dont know if you will need this. But if you need to get a internet connection in order to download packages try 
 module load proxy_vars
