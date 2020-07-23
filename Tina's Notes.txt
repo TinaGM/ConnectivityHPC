@@ -60,6 +60,8 @@ chmod -R a+rwX *
 ! w is write
 ! X is execute
 ! * is wildcard so it finds both folders and files
+! chmod o+x cluster1Conefor.csh for execute permissions
+! chmod u+x cluster1Conefor.csh for execute permissions
 
 ! I dont know if you will need this. But if you need to get a internet connection in order to download packages try 
 module load proxy_vars
