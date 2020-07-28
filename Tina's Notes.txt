@@ -87,6 +87,16 @@ R -c "library(raster);print("hi");a=1+5;print(a)"
 -R "rusage[usage_type=#number]".
 #BSUB -R "rusage[mem=16000]"
 
+!!! To make an R script for multiple job submissions:
+! I used the R script from the the HCP website https://projects.ncsu.edu/hpc/Documents/lsf_scripts.php 
+! I adjusted it for my script, which has three variables I want to run through, and I added the lines to the very top of my connectivity R script
+! Similarly, I used the HPC example .csh file from the website and edited it for my needs.
+!!! To get it to run:
+./Rloops_spec5000new.csh 2 2 2
+! Translation: ./Rloops_spec5000new.csh [# years] [# models] [# reps]
+! The variables are listed in the R scipt and their arg number is specified. (i.e. years is arg[1], model is arg[2], reps is arg[3]) 
+! You specify where in the list for each arg you want to start in the csh file
+
 !!! When we allocate resources we alllllllways write down our job id so we don't los eit and then can't kill it and then we charge 1000000$ to robs account. 
 bjobs -l JOBID
 bkill JOBID
